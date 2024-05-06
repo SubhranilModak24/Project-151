@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"> </script>
+
+    <script src="base.js"></script>   
+    <script src="car.js"></script>
+</head>
+<body>
+    <a-scene background="color:#20F9F4">
+        <a-camera position="0 2.1 3" >
+
+        </a-camera>
+        <a-entity >
+             <!--Ambient-->
+        <a-entity light="type: ambient; intensity: 1.3;">
+        </a-entity>
+        
+     <!--light-->
+        <a-entity light="type: directional;color:#FFFFFF; intensity: 1.5;" target="#cc" position="0 1.3 1" >
+
+        </a-entity>
+
+            <a-entity rotation="0 -48 0" id="cc" position="0 1 0" gltf-loader="modelUrl:Car/scene.gltf" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity base>
+                <a-cylinder radius="2" position="0 0.4 0"></a-cylinder>
+            </a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
